@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: .025em;
+}
+.wrapper{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 5em 1em 0 0;
+    width: 70vw;
+    position: relative;
+}
+.box{
+    position: absolute;
+    z-index: 100;
+    top: 44%;
+    left: 8.55%;
+}
+.leftside{
+    width: 50%;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: left 120% bottom 30%;
+    background-repeat: no-repeat;
+}
+.leftside img{
+    transform: translateX(-20%) translateY(-2%);
+}
+.rightside{
+    width: 50%;
+    padding: 0 4em 0 0 ;
+
+}
+.rightside h1{
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-bottom: .4em;
+    color: hsl(238, 29%, 16%);
+}
+.question-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 1em 0;
+    transition: all .2s linear;
+}
+.question-container img{
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.question-container .question.clicked{
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: .7em;
+    margin-left: .2em;
+    color: hsl(238, 29%, 16%);
+}
+.question-container .question{
+    color: hsl(237, 12%, 33%);
+}
+.question-container .question:hover{
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+.question-container .answer{
+    color: hsl(240, 6%, 50%);
+    font-size: .9em;
+}
+.vanish{
+    display: none;
+}
+.arrow-up{
+    transform: rotate(180deg);
+}
+
+@media (max-width: 400px){
+    .wrapper{
+        padding: 1em;
+        font-size: 12px;
+        width: 80vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+    }
+    .leftside{
+        margin-bottom: 1.75em;
+        overflow: visible;
+        width: 100%;
+        height: 20%;
+        background-image: url('./images/bg-pattern-mobile.svg');
+        background-position: 40%;
+    }
+    .leftside img{
+        width: 75%;
+        position: absolute;
+        top: -20%;
+        left: 25%;
+    }
+    .box{
+        position: absolute;
+        width: 50%;
+        top: 70px;
+        left: 60px;
+    }
+    .box img{
+        width: 45%;
+    }
+    .rightside{
+        height: 80%;
+        padding: 0 1em;
+        width: 100%;
+    }
+    .rightside h1{
+        text-align: center;
+    }
+}
